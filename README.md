@@ -1,0 +1,1 @@
+# DStrategies back quarkus application

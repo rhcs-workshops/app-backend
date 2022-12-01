@@ -1,0 +1,25 @@
+apiVersion: tekton.dev/v1beta1
+kind: PipelineRun
+metadata:
+  generateName: pipeline-dstrategies-back-
+spec:
+  pipelineRef:
+    name: build-quarkus-application
+  params:
+  - name: APP_NAME
+    value: dstrategies-back
+  - name: SOURCE_GIT_CONTEXT_DIR
+    value: dstrategies-back
+  - name: TAG
+    value: V1.0.0
+  - name: SOURCE_GIT_REVISION
+    value: main
+  workspaces:
+  - name: dockerconfig
+    secret:
+      secretName: docker-config
+  - name: app-source
+    persistentVolumeClaim:
+      claimName: workspace-pvc-dstrategies-back
+  - name: maven-settings
+    emptyDir: {}
