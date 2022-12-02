@@ -11,7 +11,7 @@ spec:
   - name: SOURCE_GIT_CONTEXT_DIR
     value: dstrategies-back
   - name: TAG
-    value: V1.0.0
+    value: V2.0.0
   - name: SOURCE_GIT_REVISION
     value: main
   workspaces:
