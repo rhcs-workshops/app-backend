@@ -1,1 +1,1 @@
-# DStrategies back quarkus application
+# Backend quarkus application
